@@ -3,7 +3,11 @@ function arraySum(i) {
     // i will be an array, containing integers, strings and/or arrays like itself.
     // Sum all the integers you find, anywhere in the nest of arrays.
     
-    return i.map(function(x) { return x instanceof Array ? arraySum(x) : typeof x == "number" ? x : 0 }).reduce(function(x,y) { return x + y })
+    return i.map(function(x) { 
+        return x instanceof Array ? arraySum(x) : typeof x == "number" ? x : 0 
+    }).reduce(function(x,y) { 
+        return x + y 
+    })
     
 }
 
