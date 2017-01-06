@@ -3,7 +3,7 @@ function longestString(i) {
     // i will be an array.
     // return the longest string in the array
        
-    return i.reduce((l,c) => typeof c == 'string' && c.length > l.length ? c : l, "")
+    return i.reduce((longest, current) => typeof current == 'string' && current.length > longest.length ? current : longest, "")
     
 }
 
