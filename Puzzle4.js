@@ -2,10 +2,8 @@ function longestString(i) {
     
     // i will be an array.
     // return the longest string in the array
-    
-    return i.reduce(function(longest, current) { 
-        return typeof current == 'string' && current.length > longest.length ? current : longest 
-    }, "")
+       
+    return i.reduce((l,c) => typeof c == 'string' && c.length > l.length ? c : l, "")
     
 }
 
