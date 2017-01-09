@@ -2,6 +2,9 @@ function longestString(i) {
     
     // i will be an array.
     // return the longest string in the array
+    
+    // Reduce to a single string by checking all string elements against a running 'longest' string and keeping the longer of the two
+    // Pass in an empty string as a parameter to Reduce to use as a starting 'longest' string
        
     return i.reduce((longest, current) => typeof current == 'string' && current.length > longest.length ? current : longest, "")
     
