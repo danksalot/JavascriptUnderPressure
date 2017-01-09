@@ -3,6 +3,9 @@ function arraySum(i) {
     // i will be an array, containing integers, strings and/or arrays like itself.
     // Sum all the integers you find, anywhere in the nest of arrays.
     
+    // First map each element into an integer either by converting strings to 0, or passing arrays back in recursively
+    // Next reduce to one integer by adding all elements together
+    
     return i.map((x) => x instanceof Array ? arraySum(x) : typeof x == 'number' ? x : 0).reduce((x,y) => x + y)
     
 }
